@@ -1,0 +1,20 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ms-processamento
+    username: postgres
+    password: 1234
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  rabbitmq:
+    addresses: amqps://atlnndqj:wcVekrUTCwWL_AP-GDlCeRrJdsRkjldO@capybara.lmq.cloudamqp.com/atlnndqj
+
+broker:
+  queue:
+    processamento:
+      name: exchange.processamento
